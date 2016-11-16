@@ -1,5 +1,7 @@
 class LiveTest {
   constructor() {
+    LiveTest.prototype.count++;
+    console.log('Hello ' + this.count);
     this.index = 0;
   }
 
@@ -12,6 +14,9 @@ class LiveTest {
   }
 }
 
-const a = new LiveTest();
+LiveTest.prototype.count = 0;
 
-a.index();
+const a = new LiveTest();
+const b = new LiveTest();
+
+console.log(a.count === b.count);
