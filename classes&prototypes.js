@@ -3,18 +3,15 @@ class LiveTest {
     this.index = 0;
   }
 
+  index() {
+    console.log('indexing and stuff...');
+  }
+
   gen() {
     console.log(++this.index);
   }
 }
 
 const a = new LiveTest();
-const b = new LiveTest();
 
-a.gen();
-
-a.__proto__.gen = () => {
-  console.log('oops');
-}
-a.gen();
-b.gen();
+a.index();
