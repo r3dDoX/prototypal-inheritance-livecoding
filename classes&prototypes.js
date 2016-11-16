@@ -10,6 +10,7 @@ class LiveTest {
 
 const a = new LiveTest();
 const b = new LiveTest();
+
 a.gen();
 
 a.__proto__.gen = () => {
