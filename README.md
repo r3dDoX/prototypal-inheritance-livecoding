@@ -1,1 +1,1 @@
-# repo for livecoding to the prototypal-inheritance-talk
+# Livecoding for prototypal-inheritance-talk
