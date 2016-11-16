@@ -1,11 +1,6 @@
-const IncrementorProto = {
-  inc() {
-    console.log(++this.index);
-  }
-}
+const Incrementor = require('./Incrementor');
 
-const incrementor = Object.create(IncrementorProto);
-incrementor.index = 0;
+const incrementor = Incrementor.create(10);
 
 incrementor.inc();
 incrementor.inc();
