@@ -1,9 +1,17 @@
-const IncrementorProto = {
-  inc() {
-    console.log(++this.index);
+const AwesomeProto = {
+  awesome() {
+    console.log('Everything is awesome!');
   }
 }
 
+const IncrementorProto = Object.assign(
+  Object.create(AwesomeProto),
+  {
+    inc() {
+      console.log(++this.index);
+    }
+  }
+);
 
 module.exports = {
   create(startingIndex) {

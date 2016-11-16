@@ -4,3 +4,4 @@ const incrementor = Incrementor.create(10);
 
 incrementor.inc();
 incrementor.inc();
+incrementor.awesome();
