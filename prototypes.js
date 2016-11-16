@@ -1,11 +1,11 @@
-function Incrementor(startingNumber) {
-  this.index = startingNumber || 0;
+const IncrementorProto = {
+  inc() {
+    console.log(++this.index);
+  }
 }
 
-Incrementor.prototype.inc = function() {
-  console.log(this.index++);
-}
+const incrementor = Object.create(IncrementorProto);
+incrementor.index = 0;
 
-const a = new Incrementor(5);
-a.inc();
-a.inc();
+incrementor.inc();
+incrementor.inc();
